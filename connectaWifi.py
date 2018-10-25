@@ -6,19 +6,21 @@ def confirma():
   if confirmacio == 'Si':
       os.system('cp /etc/hostname.iwm0-' + str(opcio) + ' /etc/hostname.iwm0')
       os.system('sh /etc/netstart iwm0')
+      print(chr(27)+"[1;32m"+"Ja tens xarxa")
+      print(chr(27)+"[1;37m"+"\n")
 
 os.system('clear')
-print ('===================================================================')
-os.system('figlet conectaWifi')
-print ('===================================================================\n')
+print(chr(27)+"[1;33m"+"=================================================================")
+os.system('figlet connectaWifi')
+print(chr(27)+"[1;33m"+"=================================================================")
 
-print ('[1] Casa Benicassim')
+print(chr(27)+"[1;37m"+"[1] Casa Benicassim")
 print ('[2] Casa Paiporta')
 print ('[3] Wifi SEPAM')
 print ('[4] Casa pares de Gemma')
 print ('[5] Smartphone Xiaomi Max 2')
 
-opcio = raw_input ('Seleciona tu opcion: ')
+opcio = raw_input ('Seleciona la teua opcio: ')
 
 if opcio == '1':
     confirma()
@@ -36,4 +38,6 @@ elif opcio == '5':
     confirma()
         
 else:
-    print ('No has triat cap opcio del menu.\n\n')
+    print(chr(27)+"[1;31m"+"No has triat cap opcio del menu.\n")
+    print(chr(27)+"[1;37m"+"\n ")
+
